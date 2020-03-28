@@ -1,22 +1,2 @@
-*, ::before, ::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-:root {
-  --black-pearl: #1e272e; /* Swedish Palette */
-  --white: white;
-}
-
-/* Default Element Styling */
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  box-sizing: border-box;
-  color: var(--black-pearl);
-}
+@import 'base.css';
+@import './components/index.css';

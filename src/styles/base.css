@@ -1,0 +1,50 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --black-pearl: #1e272e; /* Swedish Palette */
+  --white: white;
+}
+
+/* Default Element Styling */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+  box-sizing: border-box;
+  color: var(--black-pearl);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+}

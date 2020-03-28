@@ -1,0 +1,19 @@
+.loader-container .loader {
+  border: .8rem solid #f5f6fa;
+  border-top: .8rem solid #2bcbba;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  animation: spin .75s linear infinite;
+  margin-bottom: 1.6rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

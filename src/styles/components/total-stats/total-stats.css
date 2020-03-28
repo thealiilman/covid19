@@ -1,0 +1,26 @@
+.stats-container {
+  display: grid;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.stats-container__stat {
+  padding: 4rem;
+  color: var(--white);
+}
+
+.stats-container__stat.cases {
+  background-color: #45aaf2;
+}
+
+.stats-container__stat.recovered {
+  background-color: #26de81;
+}
+
+.stats-container__stat.active {
+  background-color: #fed330;
+}
+
+.stats-container__stat.deaths {
+  background-color: #fc5c65;
+}
