@@ -55,7 +55,7 @@ const TotalStats:React.FC = () => {
     const data = Object.entries(state.data)
 
     return (
-      <div className="stats-container">
+      <div className="stats-container mb-4">
         {
           data.map(([key, value]) => {
             return (
