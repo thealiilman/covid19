@@ -8,6 +8,8 @@
   padding: 4rem;
   color: var(--white);
   animation: fadeIn .5s ease-in-out;
+  box-shadow: .25rem .25rem .25rem rgba(51, 51, 51, 0.16);
+  border-radius: 1.25rem;
 }
 
 .stats-container__stat.cases {
@@ -23,5 +25,5 @@
 }
 
 .stats-container__stat.deaths {
-  background-color: #fc5c65;
+  background-color: var(--black-pearl);
 }

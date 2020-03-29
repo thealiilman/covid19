@@ -59,7 +59,7 @@ const TotalStats:React.FC = () => {
         {
           data.map(([key, value]) => {
             return (
-              <div className={`stats-container__stat ${key}`}>
+              <div className={`stats-container__stat ${key}`} key={key}>
                 <div>
                   <h3 className="font-weight-bold">{key.toUpperCase()}</h3>
                 </div>
