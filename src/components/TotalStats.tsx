@@ -45,7 +45,7 @@ const fetchTotalCovidStats = async (): Promise<State> => {
 
 const TotalStats:React.FC = () => {
   const defaultState = { isFetching: false, stats: null, error: null }
-  let [{ isFetching, stats, error }, setState] = useState<State>(defaultState)
+  const [{ isFetching, stats, error }, setState] = useState<State>(defaultState)
 
   useEffect(() => {
     setState((prevState) => ({
