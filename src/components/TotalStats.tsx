@@ -3,19 +3,19 @@ import covid from 'novelcovid'
 import Loader from 'components/Loader'
 
 interface TotalCovidStats {
-  cases: number
-  recovered: number
-  active: number
-  deaths: number
+  cases?: number
+  recovered?: number
+  active?: number
+  deaths?: number
 }
 
-interface state {
+interface State {
   error: null|string
-  data: null|TotalCovidStats
+  stats: null|TotalCovidStats
   isFetching: boolean
 }
 
-const fetchTotalCovidStats = async (): Promise<state> => {
+const fetchTotalCovidStats = async (): Promise<State> => {
   try {
     const {
       cases,
@@ -26,7 +26,7 @@ const fetchTotalCovidStats = async (): Promise<state> => {
 
     return {
       error: null,
-      data: {
+      stats: {
         cases,
         recovered,
         active,
@@ -37,22 +37,37 @@ const fetchTotalCovidStats = async (): Promise<state> => {
   } catch (e) {
     return {
       error: 'An error has occurred. 😭 Please try again later.',
-      data: null,
+      stats: null,
       isFetching: false,
     }
   }
 }
 
 const TotalStats:React.FC = () => {
-  const [state, setState] = useState<state|null>(null)
+  const defaultState = { isFetching: false, stats: null, error: null }
+  let [{ isFetching, stats, error }, setState] = useState<State>(defaultState)
+
   useEffect(() => {
+    setState((prevState) => ({
+      ...prevState,
+      isFetching: true
+    }))
+
     fetchTotalCovidStats()
       .then(successfulData => setState(successfulData))
       .catch(failedData => setState(failedData))
   }, [])
 
-  if (state?.data) {
-    const data = Object.entries(state.data)
+  if (isFetching) {
+    return <Loader />
+  }
+
+  if (error) {
+    return <h1>{error}</h1>
+  }
+
+  if (stats) {
+    const data = Object.entries(stats)
 
     return (
       <div className="stats-container mb-4">
@@ -74,11 +89,7 @@ const TotalStats:React.FC = () => {
     )
   }
 
-  if (state?.error) {
-    return <h1>{state.error}</h1>
-  }
-
-  return <Loader />
+  return null
 }
 
 export default TotalStats
