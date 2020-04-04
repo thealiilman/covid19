@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import covid from 'novelcovid'
+import { NovelCovid } from 'novelcovid'
 import Loader from 'components/Loader'
 
 interface TotalCovidStats {
@@ -22,7 +22,7 @@ const fetchTotalCovidStats = async (): Promise<State> => {
       recovered,
       active,
       deaths 
-    }: TotalCovidStats = await covid.getAll()
+    }: TotalCovidStats = await new NovelCovid().all()
 
     return {
       error: null,
@@ -35,6 +35,8 @@ const fetchTotalCovidStats = async (): Promise<State> => {
       isFetching: false,
     }
   } catch (e) {
+    console.error(e)
+
     return {
       error: 'An error has occurred. 😭 Please try again later.',
       stats: null,
