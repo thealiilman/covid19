@@ -1,5 +1,5 @@
 import React from 'react'
-import TotalStats from 'components/TotalStats'
+import Stats from 'containers/Stats'
 import Footer from 'components/Footer'
 
 const App = () => (
@@ -8,7 +8,7 @@ const App = () => (
     <p>
       The data is fetched via the <a href="https://github.com/NovelCOVID/API" target="_blank" rel="noopener noreferrer">NovelCovid API</a>.
     </p>
-    <TotalStats />
+    <Stats />
     <Footer />
   </div>
 )
