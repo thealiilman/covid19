@@ -1,5 +1,5 @@
-import TotalStats from './TotalStats'
+import TotalCovidStats from './TotalCovidStats'
 
 export {
-  TotalStats,
+  TotalCovidStats,
 }

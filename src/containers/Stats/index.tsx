@@ -1,8 +1,8 @@
 import React from 'react'
-import { TotalStats } from 'components/Stats'
+import { TotalCovidStats } from 'components/Stats'
 
 const Stats = () => {
-  return <TotalStats />
+  return <TotalCovidStats />
 }
 
 export default Stats
