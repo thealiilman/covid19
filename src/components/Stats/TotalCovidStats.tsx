@@ -2,7 +2,7 @@ import React from 'react'
 import { useTotalCovidStats } from 'hooks/Stats'
 import Loader from 'components/Loader'
 
-const TotalStats:React.FC = () => {
+const TotalCovidStats:React.FC = () => {
   const { isFetching, stats, error } = useTotalCovidStats()
 
   if (isFetching) {
@@ -17,7 +17,7 @@ const TotalStats:React.FC = () => {
     const data = Object.entries(stats)
 
     return (
-      <div className="stats-container mb-4">
+      <div className="stats-container">
         {
           data.map(([key, value]) => {
             return (
@@ -39,4 +39,4 @@ const TotalStats:React.FC = () => {
   return null
 }
 
-export default TotalStats
+export default TotalCovidStats

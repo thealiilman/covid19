@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
 import { NovelCovid } from 'novelcovid'
-import { TotalCovidStatsState, TotalCovidStats } from 'interfaces/Stats'
+import {
+  TotalCovidStatsState,
+  TotalCovidStats,
+} from 'interfaces/Stats'
 
 export const useTotalCovidStats = () => {
   const fetchTotalCovidStats = async (): Promise<TotalCovidStatsState> => {
