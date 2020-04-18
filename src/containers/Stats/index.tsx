@@ -17,11 +17,8 @@ const Stats = () => {
   return (
     <div className="mb-5">
       <Select
-        closeMenuOnScroll
         options={options}
         defaultValue={DEFAULT_SELECT_OPTION}
-        menuPlacement="auto"
-        menuPosition="fixed"
         className="mb-3"
         isLoading={isFetchingCountries}
         // Relevant GitHub issue about onChange's TypeScript problems
