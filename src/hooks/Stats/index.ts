@@ -1,5 +1,7 @@
-import { useTotalCovidStats } from './useTotalCovidStats'
+import { useFetchTotalCovidStats } from './useFetchTotalCovidStats'
+import { useFetchCountries } from './useFetchCountries'
 
 export {
-  useTotalCovidStats,
+  useFetchTotalCovidStats,
+  useFetchCountries,
 }
